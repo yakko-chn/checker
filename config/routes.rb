@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  devise_for :users
+  root to: 'items#index'
+   get "/concept/page", to: "items#concept", as: "concept"
+   get "/search/user/page", to: "items#search", as: "search"
+   
+  resources :items
 end

@@ -1,0 +1,23 @@
+<%= render "devise/shared/header" %>
+
+ <main>
+   <div class="contents">
+    <div class="topic">
+     <% if user_signed_in? %>
+      <div class="btn-topic">
+         <%= link_to "コンセプト", concept_path, class: "topic1" %>
+         <%= link_to "食材一覧", "#", class: "topic2" %>
+         <%= link_to "食材を追加する", "#", class: "topic3" %>
+      </div>
+     <% else %>
+      <div class="btn-topic">
+         <%= link_to "コンセプト", concept_path, class: "topic1" %>
+         <%= link_to "ユーザー検索", search_path, class: "topic2" %>
+         <%= link_to "食材を追加する", "#", class: "topic3" %>
+      </div>
+     <% end %>
+    </div>
+  </div>
+<main>
+
+<%= render "devise/shared/footer"%>
