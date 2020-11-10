@@ -5,10 +5,11 @@
  font-size: 20px;
 }
 
-span {
-  font-size: 20px;
+#example span {
+  font-size: 25px;
   color: red;
 }
+
 .btn-concept{
   width: 20%;
   height: 100px;
