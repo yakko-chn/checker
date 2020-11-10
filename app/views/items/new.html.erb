@@ -1,0 +1,74 @@
+<div class="items-contents">
+
+  <div class="items-main">
+    <h2 class="items-title">食材の追加</h2>
+    <%= form_with  model: @item ,local: true do |f| %>
+
+    <%=  render 'devise/shared/error_messages', model: f.object %>
+
+    <%# 商品購入日 %>
+    <div class="items-buy">
+      <div class="items">
+        購入日
+        <span class="necessary">必須</span>
+      </div>
+      <%= f.date_select :buy_day, class:"items-buy-day", id:"item-buy-day", placeholder:"食材の購入日を選択してください" %>
+    </div>
+    <%# /商品名と商品説明 %>
+
+    <%# 商品の詳細 %>
+    <div class="items-detail">
+
+      <div class="items-form">
+        <div class="items">
+          カテゴリー
+          <span class="necessary">必須</span>
+        </div>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select", id:"item-category"}) %>
+
+        <div class="items">
+          食材
+          <span class="necessary">必須</span>
+        </div>
+        <%= f.collection_select(:food_id, Food.all, :id, :name, {}, {class:"select", id:"item-food"}) %>
+
+        <div class="items">
+          サイズ
+          <span class="necessary">必須</span>
+        </div>
+        <%= f.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select", id:"item-size"}) %>
+
+      </div>
+    </div>
+    <%# /商品の詳細 %>
+
+    <%# 商品の賞味期限・メモ %>
+    <div class="items-sell">
+      <div class="items">
+        賞味期限（賞味期限）
+        <span class="necessary">必須</span>
+      </div>
+       <%= f.date_select :sell_by, class:"items-sell-by", id:"item-sell-by", placeholder:"食材の賞味期限を選択してください" %>
+     </div>
+      <div class="items-memo">
+        <div class="items">
+         メモ(任意) 
+        </div>
+       <%= f.text_area :memo, class:"item-memo", id:"item-memo", placeholder:"♦︎一般公開されます。
+    非公開を希望される場合、コメントをお使いください",size: "50" %>
+     </div>
+    </div>
+    <%# /商品の賞味期限・メモ %>
+
+    <%# 下部ボタン %>
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+    </div>
+
+    <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+
+    <%# /下部ボタン %>
+  </div>
+  <% end %>
+
+</div>

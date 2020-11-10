@@ -15,4 +15,7 @@ class User < ApplicationRecord
     validates  :password, confirmation: true, format: { with: VALID_PASSWORD }
     validates  :password_confirmation, presence: true
 
+  
+  #Association
+    has_many :items
 end
