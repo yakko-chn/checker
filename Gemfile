@@ -60,3 +60,7 @@ gem 'i18n_generators'
 gem 'devise'
 gem 'pry-rails'
 gem 'active_hash'
+
+group :production do
+  gem 'unicorn', '5.4.1'
+end
