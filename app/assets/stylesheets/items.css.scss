@@ -44,7 +44,8 @@ body {
 /*メニュー
 ---------------------------------------------------------------------------*/
 main {
-  background-image: url("harvest-3679075_640.jpg");
+  background-image: image-url("harvest-3679075_640.jpg");
+  // background-image: asset-url("harvest-3679075_640.jpg");
   background-size: cover;
   text-align: center;
 }
