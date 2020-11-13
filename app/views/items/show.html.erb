@@ -1,0 +1,29 @@
+<div class="food-top">
+ <div class="food-main">
+   <h1>食材一覧</h1>
+   <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+
+ <div class="food-contents">
+   <% if user_signed_in? && @item.user_id == current_user.id %>
+      <% @items.each do |item|%>
+        <div class="food-content">
+          <%= "購入日：#{item.buy_day}"%><br>
+          <%= "食材：#{item.category.name}"%>(<%= item.food.name%>)<br>
+          <%= "サイズ：#{item.size.name}"%><br>
+          <%= "賞味期限：#{item.sell_by}"%><br>
+          <%= "メモ：#{item.memo}"%><br>
+
+          <%= link_to '詳細', "#" %>
+          <%= link_to '編集', "#" %>
+          <%= link_to '処分', "#", method: :delete %><br>
+       </div>
+      <% end %>
+    <% end %>
+   </div>
+   <% if user_signed_in? && @item.user_id != current_user.id %>
+      <div class="no_food">
+         <h1>食材はありません<h1>
+         <%= link_to '食材を追加する', new_item_path %>
+    <% end %>
+  </div>
+</div>
