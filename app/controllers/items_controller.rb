@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create]
 
   def index
-    @items = Item.all
+    # @items = Item.all
   end
 
   def new
@@ -16,6 +16,11 @@ class ItemsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @items = Item.all
+    @item = Item.find(params[:id])
   end
 
   def concept

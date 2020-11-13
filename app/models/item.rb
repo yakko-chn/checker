@@ -16,6 +16,13 @@ class Item < ApplicationRecord
       validates  :sell_by
     end
 
+    #  validate  :sell_by
+
+    #  def sell_by
+    #   errors.add(:sell_by, "は今日以降のものを選択してください") if
+    #   sell_by <= Date.today
+    #  end
+
   #Association
    belongs_to :user
 end
