@@ -1,23 +1,27 @@
-<%= render "devise/shared/header" %>
 
- <main>
-   <div class="contents">
-    <div class="topic">
-     <% if user_signed_in? %>
-      <div class="btn-topic">
-         <%= link_to "コンセプト", concept_path, class: "topic1" %>
-         <%= link_to "食材一覧", item_path(current_user.id), class: "topic2" %>
-         <%= link_to "食材を追加する", new_item_path, class: "topic3" %>
-      </div>
-     <% else %>
-      <div class="btn-topic">
-         <%= link_to "コンセプト", concept_path, class: "topic1" %>
-         <%= link_to "ユーザー検索", search_path, class: "topic2" %>
-         <%= link_to "食材を追加する", new_item_path, class: "topic3" %>
-      </div>
-     <% end %>
-    </div>
-  </div>
-<main>
+<%# 食材の追加 %>
 
-<%= render "devise/shared/footer"%>
+<div class="food-top">
+ <div class="food-main">
+   <h1>食材一覧</h1>
+   <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+
+ <div class="food-contents">
+   <% @items.each do |item|%>
+      <% if item.user_id == current_user.id %>
+        <div class="food-content">
+          <%= "ユーザー名：#{item.user.nickname}さん"%><br>
+          <%= "購入日：#{item.buy_day}"%><br>
+          <%= "食材：#{item.category.name}"%>(<%= item.food.name%>)<br>
+          <%= "サイズ：#{item.size.name}"%><br>
+          <%= "賞味期限：#{item.sell_by}"%><br>
+          <%= "メモ：#{item.memo}"%><br>
+
+          <%= link_to '詳細', "#" %>
+          <%= link_to '編集', edit_item_path(item.id) %>
+          <%= link_to '処分', item_path(item.id), method: :delete %><br>
+        </div>
+       <% end %>
+   <% end %>
+ </div>
+</div>
