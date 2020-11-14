@@ -1,3 +1,5 @@
+require "date"
+
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
     belongs_to_active_hash :category
@@ -16,12 +18,13 @@ class Item < ApplicationRecord
       validates  :sell_by
     end
 
-    #  validate  :sell_by
+    validate :present_after
 
-    #  def sell_by
-    #   errors.add(:sell_by, "は今日以降のものを選択してください") if
-    #   sell_by <= Date.today
-    #  end
+    def present_after
+     if  sell_by < Date.today
+      errors.add(:sell_by, '（賞味期限）は本日以降の日付で登録してください') 
+     end
+    end
 
   #Association
    belongs_to :user

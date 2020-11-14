@@ -1,7 +1,9 @@
+<%# cssは"assets/stylesheet/new.cssを参照 %>
+
 <div class="items-contents">
 
   <div class="items-main">
-    <h2 class="items-title">食材の追加</h2>
+    <h2 class="items-edit">食材の編集</h2>
     <%= form_with  model: @item ,local: true do |f| %>
 
     <%=  render 'devise/shared/error_messages', model: f.object %>
@@ -54,14 +56,14 @@
         <div class="items">
          メモ(任意) 
         </div>
-       <%= f.text_area :memo, class:"item-memo", id:"item-memo", placeholder:"♦（例）残り3本",size: "50" %>
+       <%= f.text_area :memo, class:"item-memo", id:"item-memo", placeholder:"♦（例）賞味期限が近づいているので早く消費する。", size: "50" %>
      </div>
     </div>
     <%# /商品の賞味期限・メモ %>
 
     <%# 下部ボタン %>
     <div class="sell-btn-contents">
-      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%= f.submit "編集する" ,class:"sell-btn" %>
     </div>
 
     <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>

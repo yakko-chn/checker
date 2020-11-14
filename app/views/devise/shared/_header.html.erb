@@ -9,7 +9,7 @@
         <%= "ユーザー名：#{current_user.nickname}さん"%>
       </div>
      <div class="login">
-        <%= link_to "マイページ", "/users/#{current_user.id}", class: "mypage"%>
+        <%= link_to "マイページ", root_path, class: "mypage"%>
         <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: "mypage"%>
      </div>
     </div>

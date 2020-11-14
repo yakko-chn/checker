@@ -1,8 +1,10 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :create]
+  before_action :authenticate_user!, only: [:new, :edit, :create, :update]
+  before_action :set_item, only: [:create, :edit, :update]
+  before_action :move_to_top_page, only: :edit
 
   def index
-    # @items = Item.all
+    @items = Item.all
   end
 
   def new
@@ -10,17 +12,29 @@ class ItemsController < ApplicationController
   end
 
   def create
-    @item = Item.new(item_params)
     if @item.save
-      redirect_to root_path, notice: '登録が完了しました'
+      redirect_to root_path
     else
       render :new
     end
   end
 
   def show
-    @items = Item.all
-    @item = Item.find(params[:id])
+  end
+
+  def update
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :new
+    end
+  end
+
+  def destroy
+    item = Item.find(params[:id])
+   if item.destroy
+    redirect_to root_path
+   end
   end
 
   def concept
@@ -34,5 +48,16 @@ class ItemsController < ApplicationController
   private
   def item_params
     params.require(:item).permit(:buy_day, :category_id, :food_id, :size_id, :sell_by, :memo).merge(user_id: current_user.id)
+  end
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
+  def move_to_top_page
+    @item = Item.find(params[:id])
+    unless current_user.id == @item.user_id
+      redirect_to  root_path
+    end
   end
 end
