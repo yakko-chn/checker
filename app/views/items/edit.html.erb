@@ -1,10 +1,11 @@
 <%# cssは"assets/stylesheet/new.cssを参照 %>
 
+<%= form_with  model: @item ,local: true do |f| %>
+
 <div class="items-contents">
 
   <div class="items-main">
     <h2 class="items-edit">食材の編集</h2>
-    <%= form_with  model: @item ,local: true do |f| %>
 
     <%=  render 'devise/shared/error_messages', model: f.object %>
 

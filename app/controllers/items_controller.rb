@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: [:new, :edit, :create, :update]
-  before_action :set_item, only: [:create, :edit, :update]
+  before_action :set_item, only: [:edit, :update]
   before_action :move_to_top_page, only: :edit
 
   def index
@@ -12,6 +12,8 @@ class ItemsController < ApplicationController
   end
 
   def create
+    @item = Item.new(item_params)
+    
     if @item.save
       redirect_to root_path
     else
@@ -20,6 +22,10 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @item = Item.find(params[:id])
+
+    @comments = @item.comments
+    @comment = current_user.comments.new 
   end
 
   def update

@@ -1,6 +1,7 @@
 <%= render "devise/shared/header" %>
 
  <main>
+   <%# <%= image_tag "harvest-3679075_640.jpg",size: '2300x1100', class: "main-icon", :alt => 'SAMPLE' %> 
    <div class="contents">
     <div class="topic">
      <% if user_signed_in? %>
@@ -12,7 +13,7 @@
      <% else %>
       <div class="btn-topic">
          <%= link_to "コンセプト", concept_path, class: "topic1" %>
-         <%= link_to "食材一覧", search_path, class: "topic2" %>
+         <%= link_to "みんなの食材", search_path, class: "topic2" %>
          <%= link_to "食材を追加する", new_item_path, class: "topic3" %>
       </div>
      <% end %>

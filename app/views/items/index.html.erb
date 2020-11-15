@@ -17,7 +17,7 @@
           <%= "賞味期限：#{item.sell_by}"%><br>
           <%= "メモ：#{item.memo}"%><br>
 
-          <%= link_to '詳細', "#" %>
+          <%= link_to '詳細', item_path(item.id) %>
           <%= link_to '編集', edit_item_path(item.id) %>
           <%= link_to '処分', item_path(item.id), method: :delete %><br>
         </div>
