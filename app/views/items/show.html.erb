@@ -1,0 +1,46 @@
+
+<div class="comments">  
+  <div class="item-comments">
+    <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
+      <%= form_with model: [@item, @comment], local: true do |f|%>
+      <h1> コメントの投稿 </h1>
+
+      <div class="comments-food">
+          <div class="comment-food">
+            <h6> コメントしたい食材 </h6>
+            <%= "ユーザー名：#{@item.user.nickname}さん"%><br>
+            <%= "購入日：#{@item.buy_day}"%><br>
+            <%= "食材：#{@item.category.name}"%>(<%= @item.food.name%>)<br>
+            <%= "サイズ：#{@item.size.name}"%><br>
+            <%= "賞味期限：#{@item.sell_by}"%><br>
+            <%= "メモ：#{@item.memo}"%><br>
+          </div>
+
+        <div class="field-comment">
+          <%= f.label :text, "コメント" %><br />
+          <%= f.text_field :text , placeholder:"例）近所の安倍さんからの頂き物。", size: "50" ,class: "text"  %>
+        </div>
+        <div class="actions">
+          <%= f.submit "送信する", class: :form__btn  %>
+        </div>
+            <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
+       </div>
+      <% end %>
+    <%# // ログインしているユーザーには上記を表示する %>
+    <div class="comment">
+      <h6> 投稿コメント </h6>
+      <ul class="comments_lists">
+        <%# 投稿に紐づくコメントを一覧する処理を記述する %>
+        <% @comments.each do |comment|  %>
+          <li class="comments_list">
+            <%=  " 投稿日 ：  #{l comment.created_at, format: :short}" %><br>
+            <%=  " コメント内容 ： #{comment.text}" %>
+            <%# <%= link_to '削除する',  "/items/#{@item .id}/comments/#{@comment.id}}" , method: :delete %><br> 
+            <%# <%= link_to '削除する',  "/items/#{@item .id}/comments/#{@comment.id}}" , method: :delete %><br>
+          </li> 
+         <% end  %>
+        <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
+      </ul>
+    </div>
+  </div>
+  </div>
