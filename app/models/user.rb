@@ -18,4 +18,5 @@ class User < ApplicationRecord
   
   #Association
     has_many :items
+    has_many :comments, dependent: :destroy
 end
