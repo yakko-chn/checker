@@ -1,0 +1,38 @@
+<%= render "devise/shared/header" %>
+
+<div class="search">
+  <%= form_with(url: search_users_path, local: true, method: :get, class: "search-form") do |f| %>
+    <%= f.text_field :nickname, placeholder: "ユーザー名で検索できます", class: "search-input" %>
+    <%= f.submit "検索", class: "search-btn" %>
+  <% end %>
+</div>
+
+<%# //トップページからnicknameの入力結果 %>
+<div class="search-users">
+   <% if @item == nil %>
+    <div class="search-explanation">
+　　　<div class="details">
+      <h1>ログインなしに、ユーザー名の検索で食材の確認ができます。</h1>
+      <h1>検索後に何も表示されない場合は、登録がありません。</h1>
+      <h1>＊食材の追加・編集などはログインが必要です。</h1>
+     </div>
+    </div>
+    <% else %>
+
+  <div class="results">
+    <% @item.each do |item|%>
+      <div class="result">
+        <%= "ユーザー名：#{item.user.nickname}さん"%><br>
+        <%= "購入日：#{item.buy_day}"%><br>
+        <%= "食材：#{item.category.name}"%>(<%= item.food.name%>)<br>
+        <%= "サイズ：#{item.size.name}"%><br>
+        <%= "賞味期限：#{item.sell_by}"%><br>
+        <%= "メモ：#{item.memo}"%><br>
+      </div> 
+    <% end %>
+  </div>
+   <% end %>
+  </div> 
+</div>
+
+<%# </div> %>
