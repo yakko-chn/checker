@@ -47,6 +47,7 @@ input[type="password"] {
 
 }
 
+
  /* スマホ表示時 */
 @media (max-width: 599px) {
   html {

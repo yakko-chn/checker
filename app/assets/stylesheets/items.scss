@@ -1,7 +1,5 @@
-/*全端末（PC・タブレット・スマホ）共通設定
-------------------------------------------------------------------------------------------------------------------------------------------------------*/
 
-/*全体の設定
+/*全体の設定(header/footer込み)
 ---------------------------------------------------------------------------*/
 html {
   font-family: sans-serif;
@@ -12,6 +10,9 @@ body {
   height: 100%;
 }
 
+/*header
+---------------------------------------------------------------------------*/
+
 .header {
   height: 80px;
   width: 100%;
@@ -19,6 +20,15 @@ body {
   position: fixed;
   display: block;
   border-bottom: burlywood 1px solid;
+}
+
+
+.header-top a{
+  display: block;
+  padding:0 30px;
+  margin: 10px 0;
+  height: 40px;
+  float: left;
 }
 
 .user-name{
@@ -34,17 +44,18 @@ body {
   position: relative;
   list-style: none;
  }
+ 
  .login a{
    font-size: 20px;
  }
+
  .mypage1 {
    position: absolute;
-   top: -10px;
-   right: 200px;
+   right: 130px;
  }
+
  .mypage2 {
    position: absolute;
-   top: -10px;
    right: -10px;
  }
  
@@ -57,31 +68,25 @@ body {
   padding-top: 10px;
 }
 
-.header-top a{
-  display: block;
-  font-size: 30px;
-  padding:0 30px;
-  margin: 10px 0;
-  height: 40px;
-  float: left;
+.title-name a {
+  font-size: 35px;
 }
 
 .signin a {
   display: block;
   float: right;
-  margin: 10px 50px;
-  padding-right: 10px;
+  margin: 10px 30px 10px -10px;
+  padding-right: 5px;
   font-size: 20px;
 }
 
 
-/*メニュー
+/*メニュー（main.html.erb）
 ---------------------------------------------------------------------------*/
 main {
   background-image: image-url("harvest-3679075_640.jpg");
   width: 100%;
   height: auto;
-  // background-image: asset-url("harvest-3679075_640.jpg");
   background-size: cover;
   text-align: center;
 }
@@ -90,18 +95,21 @@ main {
   max-width: 1170px;
   padding: 0 15px;
   margin: 0 auto;
+  position: relative;
 }
 
 .topic {
+  position: absolute;
+  top: 100px;
   width: 100%;
   height: 880px;
-  padding: 180px 0 100px 0;
+  padding: 0 0 150px 0;
   position: relative;
 }
 
 .btn-topic {
   position: absolute;
-  bottom: 50px;
+  bottom: 80px;
   right: 30px;
   text-align: center;
   padding: 100px;
@@ -119,6 +127,7 @@ main {
   background-color: rgba(134, 21, 21, 0.6);
   border-radius: 10px;
 }
+
 .topic1:hover {
   background: white;
   color: black;
@@ -131,6 +140,7 @@ main {
   background-color: rgba(78, 54, 165, 0.6);
   border-radius: 10px;
 }
+
 .topic2:hover {
   background: white;
   color: black;
@@ -143,15 +153,18 @@ main {
   background-color:  rgba(77, 136, 10, 0.6);
   border-radius: 10px;
 }
+
 .topic3:hover {
   background: white;
   color: black;
   transition: 0.5s;
 }
 
+/*フッター
+---------------------------------------------------------------------------*/
 
 .footer {
-  height: 70px;
+  height: 80px;
 	text-align: center;
 	background: #222;	
 	color: #fff;
@@ -159,14 +172,24 @@ main {
 }
 
 .footer P {
-  padding: 15px;
+  padding: 20px;
+  margin-top: 20px;
 }
 
+
  /* タブレット表示時 */
+
  @media (max-width: 1024px) {
-  main {
-    background-image: image-url("harvest-3679075_640.jpg");
-    width: auto 0;
+
+  /*ヘッダー
+  ---------------------------*/
+
+  .signin a {
+    display: block;
+    float: right;
+    margin: 10px 40px 20px -10px;
+    padding-right: 15px;
+    font-size: 18px;
   }
 
   .login {
@@ -200,19 +223,49 @@ main {
      right: 70px;
    }
 
-   .btn-topic a{
-    display: block;
-   }
+  /*main.html.erb
+  ---------------------------*/
+    main {
+      background-image: image-url("harvest-3679075_640.jpg");
+      width: auto 0;
+    }
+
+    .contents {
+      max-width: 1170px;
+      padding: 0 15px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .topic {
+      position: absolute;
+      top: 100px;
+      width: 100%;
+      height: 880px;
+      padding: 0 0 150px 0;
+      position: relative;
+    }
+
+    .btn-topic a{
+      display: block;
+      }
+      
+ /*フッター
+  ---------------------------*/
    .footer {
     height: 70px;
     font-size: 14px;
    }
+
 }
 
 
-
  /* スマホ表示時 */
+
 @media (max-width: 599px) {
+
+ /*ヘッダー
+  ---------------------------*/
   .header {
     position: fixed;
     z-index: 10;
@@ -251,23 +304,41 @@ main {
      top: 60px;
      left: 200px;
    }
-   
-  .signin {
-   position: relative;
+
+  .signin a {
+    display: block;
+    float: right;
+    margin: 50px 40px 20px -10px;
+    padding-right: 15px;
+    font-size: 18px;
   }
 
-  .post1 {
-    position: absolute;
-    top: 60px;
-  }
-  .post2 {
-    position: absolute;
-    top: 60px;
-    right: 104px;
+
+ /*main.html.erb
+  ---------------------------*/
+  .contents {
+    background-image: image-url("harvest-3679075_640.jpg");
+    background-size: cover;
   }
 
   .contents {
-    background-color: white;
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .topic {
+    position: absolute;
+    top: -150px;
+    width: 100%;
+    height: 880px;
+    padding: 0 0 150px 0;
+    position: relative;
+  }
+
+  .btn-topic {
+   padding: 0;
   }
 
   .btn-topic a{
@@ -275,6 +346,9 @@ main {
     font-size: 20px;
     padding: 35px;
   }
+
+ /*フッター
+  ---------------------------*/
   
   .footer {
     height: 70px;

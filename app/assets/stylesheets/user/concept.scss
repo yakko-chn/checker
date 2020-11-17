@@ -1,3 +1,5 @@
+/* コンセプトページ */
+
 .concept-main {
  height: 100%;
  width: 100%;
@@ -48,7 +50,6 @@
 
 .concept-image {
   background-image: image-url("roses-5663972_640.jpg");
-  // background-image: asset-url("roses-5663972_640.jpg");
   width: 100%;
   height: 900px;
   padding-top: 20px;
@@ -65,10 +66,10 @@
 	color: #fff;
 	border-radius: 100px;
 }
+
 #example li {
   list-style-type: none;
 }
-
 
 #food-loss h4{
   margin-bottom: 20px;
@@ -78,6 +79,10 @@
 	background: #222;
 	color: #fff;
 	border-radius: 100px;
+}
+
+#food-loss p {
+  font-size: 14px;
 }
 
 #todo h4{
@@ -91,8 +96,9 @@
 }
 
 #todo ul {
-  margin-left: 380px;
+  margin-left: 300px;
  }
+
  #todo li{
   list-style-type: decimal;
   text-align: left;
@@ -120,6 +126,7 @@
  .concept-sub {
    font-size: 10px;
    height: 70vh;
+   width: 75%;
   }
 
   .concept-sub p{
@@ -127,133 +134,161 @@
     margin: 3px;
   }
 
- .concept-image {
-   position: relative;
-   height: 70vh;
- }
+  .concept-image {
+    position: relative;
+    height: 70vh;
+  }
+  
+  .btn-concept p{
+    position: absolute;
+    display: block;
+    top: -15px;
+  }
 
- #example span {
-  font-size: 15px;
-}
+  .btn-concept a{
+    text-decoration: none;
+  }
 
- .btn-concept p{
-   position: absolute;
-   display: block;
-   top: -15px;
- }
+  .concept1{
+    position: absolute;
+    display: block;
+    top: 120px;
+    left: 60px;
+  }
 
- .concept1{
-  position: absolute;
-  display: block;
-  top: 120px;
-  left: 60px;
- }
+  .concept2{
+    position: absolute;
+    display: block;
+    top: 175px;
+    left: 60px;
+  }
 
- .concept2{
-  position: absolute;
-  display: block;
-  top: 175px;
-  left: 60px;
- }
+  .concept3{
+    position: absolute;
+    display: block;
+    top: 230px;
+    left: 60px;
+  }
+  .concept4{
+    position: absolute;
+    display: block;
+    top: 295px;
+    left: 60px;
+  }
+  .concept5{
+    position: absolute;
+    display: block;
+    top: 350px;
+    left: 60px;
+  }
 
- .concept3{
-  position: absolute;
-  display: block;
-  top: 230px;
-  left: 60px;
- }
- .concept4{
-  position: absolute;
-  display: block;
-  top: 295px;
-  left: 60px;
- }
- .concept5{
-  position: absolute;
-  display: block;
-  top: 350px;
-  left: 60px;
- }
+  #example span {
+    font-size: 15px;
+  }
+  
+  #food-loss p {
+    font-size: 5px;
+  }
 
   #todo ul {
-    margin-left: 100px;
+    margin-left: 170px;
   }
   #todo li {
     margin: 0px;
     font-size: 10px;
     display: list-item;
   }
+
+  #message p {
+    font-size: 7px;
+  }
 }
+
 
  /* スマホ表示時 */
 @media (max-width: 599px) {
+
   .concept-sub {
-    width: 90vw;
+    width: 95vw;
     font-size: 7px;
     height: 70vh;
-   }
- 
-   .concept-sub p{
-     font-size: 7px;
-     margin: 2px;
    }
  
   .concept-image {
     position: relative;
     height: 60vh;
+    background-color: cornflowerblue;
   }
- 
-  #example span {
-   font-size: 9px;
- }
- 
+
   .btn-concept p{
     position: absolute;
     display: block;
     top: -15px;
   }
  
+  .btn-concept a{
+    font-size: 20px;
+    margin: -10px;
+  }
+
   .concept1{
-   position: absolute;
-   display: block;
-   top: 120px;
-   left: 40px;
+    position: absolute;
+    display: block;
+    top: 120px;
+    left: 40px;
   }
  
   .concept2{
-   position: absolute;
-   display: block;
-   top: 175px;
-   left: 40px;
+    position: absolute;
+    display: block;
+    top: 175px;
+    left: 40px;
   }
  
   .concept3{
-   position: absolute;
-   display: block;
-   top: 230px;
-   left: 40px;
+    position: absolute;
+    display: block;
+    top: 230px;
+    left: 40px;
   }
+
   .concept4{
-   position: absolute;
-   display: block;
-   top: 295px;
-   left: 40px;
+    position: absolute;
+    display: block;
+    top: 295px;
+    left: 40px;
   }
+
   .concept5{
-   position: absolute;
-   display: block;
-   top: 350px;
-   left: 40px;
+    position: absolute;
+    display: block;
+    top: 350px;
+    left: 40px;
+  }
+
+  .concept-sub p{
+    font-size: 7px;
+    margin: 2px;
+  }
+
+ 
+   #example span {
+    font-size: 9px;
   }
  
+   #food-loss p {
+    font-size: 7px;
+  }
+
    #todo ul {
      margin-left: 100px;
    }
    #todo li {
-     margin: 0px;
-     font-size: 10px;
-     display: list-item;
+    margin: 0px;
+    font-size: 10px;
+    display: list-item;
    }
+
   .back-top-page{
     margin-bottom: 15px;
   }
