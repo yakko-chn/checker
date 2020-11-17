@@ -2,36 +2,6 @@
   text-align: center;
 }
 
-.header {
-  height: 80px;
-  width: 100%;
-  background-color:white;
-  position: fixed;
-  border-bottom: burlywood 1px solid;
-}
-.user-name{
- text-align: right;
- font-size: 20px;
-}
-
-.name{
-  padding-right: 20px;
-}
-
-.login{
-  list-style: none;
-  float: right;
-}
-
-input[type="submit"] {
-  padding: 10px 20px;
- }
-
-.login a {
-  font-size: 20px;
-  margin-bottom: 5px;
-}
-
 .exit a {
   display: block;
   padding-bottom: 30px;
@@ -39,4 +9,29 @@ input[type="submit"] {
 }
 
 
+/* * // レスポンシブデザイン */ */
 
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+
+}
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  html {
+    margin: 0px;
+  }
+  .session-main {
+    width: 100%;
+    height: 500px;
+  }
+
+  .actions {
+    margin-bottom: 50px;
+  }
+
+  .exit {
+    font-size: 10px;
+    margin-bottom: 50px;
+  }
+}

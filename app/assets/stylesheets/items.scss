@@ -5,9 +5,11 @@
 ---------------------------------------------------------------------------*/
 html {
   font-family: sans-serif;
+  height: 100%;
 }
 body {
   margin: 0px;
+  height: 100%;
 }
 
 .header {
@@ -18,6 +20,37 @@ body {
   display: block;
   border-bottom: burlywood 1px solid;
 }
+
+.user-name{
+  text-align: right;
+  font-size: 20px;
+ }
+ 
+ .name{
+   padding-right: 20px;
+ }
+
+ .login {
+  position: relative;
+  list-style: none;
+ }
+ .login a{
+   font-size: 20px;
+ }
+ .mypage1 {
+   position: absolute;
+   top: -10px;
+   right: 200px;
+ }
+ .mypage2 {
+   position: absolute;
+   top: -10px;
+   right: -10px;
+ }
+ 
+ input[type="submit"] {
+   padding: 10px 20px;
+  }
 
 .header-top {
   position: relative;
@@ -41,25 +74,20 @@ body {
   font-size: 20px;
 }
 
+
 /*メニュー
 ---------------------------------------------------------------------------*/
 main {
   background-image: image-url("harvest-3679075_640.jpg");
+  width: 100%;
+  height: auto;
   // background-image: asset-url("harvest-3679075_640.jpg");
   background-size: cover;
   text-align: center;
-  // position: relative;
 }
-// .main-icon {
-//  bottom: 40px;
-//  position: absolute;
-//  top: 140px;
-//  background-size: cover;
-// }
 
 .contents {
   max-width: 1170px;
-  width: 100%;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -74,15 +102,17 @@ main {
 .btn-topic {
   position: absolute;
   bottom: 50px;
-  right: 0.1px;
+  right: 30px;
   text-align: center;
   padding: 100px;
 }
+
 .btn-topic a {
   margin: 20px;
   padding: 30px;
   text-decoration: none;
 }
+
 .topic1 {
   color: #fff;
   font-size: 30px;
@@ -132,3 +162,122 @@ main {
   padding: 15px;
 }
 
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
+  main {
+    background-image: image-url("harvest-3679075_640.jpg");
+    width: auto 0;
+  }
+
+  .login {
+    position: relative;
+    list-style: none;
+   }
+   .login a{
+     font-size: 20px;
+   }
+   .mypage1 {
+     position: absolute;
+     top: -10px;
+     right: 120px;
+   }
+   .mypage2 {
+     position: absolute;
+     top: -10px;
+     right: -10px;
+   }
+   .signin {
+    position: relative;
+   }
+   .post1 {
+     position: absolute;
+     top: 30px;
+     right: -40px;
+   }
+   .post2 {
+     position: absolute;
+     top: 30px;
+     right: 70px;
+   }
+
+   .btn-topic a{
+    display: block;
+   }
+   .footer {
+    height: 70px;
+    font-size: 14px;
+   }
+}
+
+
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .header {
+    position: fixed;
+    z-index: 10;
+    border-bottom: black 2px solid;
+    height: 150px ;
+  }
+
+  .header-top a {
+    font-size: 30px;
+  }
+
+  .user-name {
+    position: relative;
+  }
+
+  .name {
+    position: absolute;
+    top: 110px;
+    left: 160px;
+    font-size: 18px;
+  }
+
+  .login {
+    position: relative;
+   }
+   .login a{
+     font-size: 20px;
+   }
+   .mypage1 {
+     position: absolute;
+     top: 60px;
+     left: 50px;
+   }
+   .mypage2 {
+     position: absolute;
+     top: 60px;
+     left: 200px;
+   }
+   
+  .signin {
+   position: relative;
+  }
+
+  .post1 {
+    position: absolute;
+    top: 60px;
+  }
+  .post2 {
+    position: absolute;
+    top: 60px;
+    right: 104px;
+  }
+
+  .contents {
+    background-color: white;
+  }
+
+  .btn-topic a{
+    display: block;
+    font-size: 20px;
+    padding: 35px;
+  }
+  
+  .footer {
+    height: 70px;
+    font-size: 14.5px;
+  }
+}
