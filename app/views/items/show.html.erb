@@ -35,8 +35,6 @@
           <li class="comments_list">
             <%=  " 投稿日 ：  #{l comment.created_at, format: :short}" %><br>
             <%=  " コメント内容 ： #{comment.text}" %>
-            <%# <%= link_to '削除する',  "/items/#{@item .id}/comments/#{@comment.id}}" , method: :delete %><br> 
-            <%# <%= link_to '削除する',  "/items/#{@item .id}/comments/#{@comment.id}}" , method: :delete %><br>
           </li> 
          <% end  %>
         <%# // 投稿に紐づくコメントを一覧する処理を記述する %>

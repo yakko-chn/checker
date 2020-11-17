@@ -15,6 +15,13 @@ class User < ApplicationRecord
     validates  :password, confirmation: true, format: { with: VALID_PASSWORD }
     validates  :password_confirmation, presence: true
 
+    def self.search(search)
+      if search != ""
+        User.where('nickname LIKE(?)', "%#{search}%")
+      else
+        User.all
+      end
+    end
   
   #Association
     has_many :items

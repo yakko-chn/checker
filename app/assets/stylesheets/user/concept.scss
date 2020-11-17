@@ -10,6 +10,11 @@
   color: red;
 }
 
+#example li {
+  color:cornflowerblue;
+  font-weight: bold;
+}
+
 .btn-concept{
   width: 20%;
   height: 100px;
@@ -86,7 +91,7 @@
 }
 
 #todo ul {
-  margin-left: 400px;
+  margin-left: 380px;
  }
  #todo li{
   list-style-type: decimal;
@@ -108,7 +113,149 @@
 }
 
 
+// レスポンシブデザイン
 
+ /* タブレット表示時 */
+ @media (max-width: 1024px) {
 
+ .concept-sub {
+   font-size: 10px;
+   height: 70vh;
+  }
 
+  .concept-sub p{
+    font-size: 12px;
+    margin: 3px;
+  }
 
+ .concept-image {
+   position: relative;
+   height: 70vh;
+ }
+
+ #example span {
+  font-size: 15px;
+}
+
+ .btn-concept p{
+   position: absolute;
+   display: block;
+   top: -15px;
+ }
+
+ .concept1{
+  position: absolute;
+  display: block;
+  top: 120px;
+  left: 60px;
+ }
+
+ .concept2{
+  position: absolute;
+  display: block;
+  top: 175px;
+  left: 60px;
+ }
+
+ .concept3{
+  position: absolute;
+  display: block;
+  top: 230px;
+  left: 60px;
+ }
+ .concept4{
+  position: absolute;
+  display: block;
+  top: 295px;
+  left: 60px;
+ }
+ .concept5{
+  position: absolute;
+  display: block;
+  top: 350px;
+  left: 60px;
+ }
+
+  #todo ul {
+    margin-left: 100px;
+  }
+  #todo li {
+    margin: 0px;
+    font-size: 10px;
+    display: list-item;
+  }
+}
+
+ /* スマホ表示時 */
+@media (max-width: 599px) {
+  .concept-sub {
+    width: 90vw;
+    font-size: 7px;
+    height: 70vh;
+   }
+ 
+   .concept-sub p{
+     font-size: 7px;
+     margin: 2px;
+   }
+ 
+  .concept-image {
+    position: relative;
+    height: 60vh;
+  }
+ 
+  #example span {
+   font-size: 9px;
+ }
+ 
+  .btn-concept p{
+    position: absolute;
+    display: block;
+    top: -15px;
+  }
+ 
+  .concept1{
+   position: absolute;
+   display: block;
+   top: 120px;
+   left: 40px;
+  }
+ 
+  .concept2{
+   position: absolute;
+   display: block;
+   top: 175px;
+   left: 40px;
+  }
+ 
+  .concept3{
+   position: absolute;
+   display: block;
+   top: 230px;
+   left: 40px;
+  }
+  .concept4{
+   position: absolute;
+   display: block;
+   top: 295px;
+   left: 40px;
+  }
+  .concept5{
+   position: absolute;
+   display: block;
+   top: 350px;
+   left: 40px;
+  }
+ 
+   #todo ul {
+     margin-left: 100px;
+   }
+   #todo li {
+     margin: 0px;
+     font-size: 10px;
+     display: list-item;
+   }
+  .back-top-page{
+    margin-bottom: 15px;
+  }
+}

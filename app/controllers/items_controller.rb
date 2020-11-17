@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    render "layouts/search_user"
+    render "users/search"
   end
 
   private
