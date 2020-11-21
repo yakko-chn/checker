@@ -19,7 +19,7 @@ class Size < ActiveHash::Base
 
     { id: 16, name: '100g' },
     { id: 17, name: '200g' },
-    { id: 18, name: '300' },
+    { id: 18, name: '300g' },
     { id: 19, name: '400g' },
     { id: 20, name: '500g' },
     { id: 21, name: '1kg' },

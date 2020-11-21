@@ -24,19 +24,19 @@
           カテゴリー
           <span class="necessary">必須</span>
         </div>
-        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select", id:"item-category"}) %>
+        <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"select1", id:"item-category"}) %>
 
         <div class="items">
           食材
           <span class="necessary">必須</span>
         </div>
-        <%= f.collection_select(:food_id, Food.all, :id, :name, {}, {class:"select", id:"item-food"}) %>
+        <%= f.collection_select(:food_id, Food.all, :id, :name, {}, {class:"select2 hidden1", id:"item-food"}) %>
 
         <div class="items">
           サイズ
           <span class="necessary">必須</span>
         </div>
-        <%= f.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select", id:"item-size"}) %>
+        <%= f.collection_select(:size_id, Size.all, :id, :name, {}, {class:"select3 hidden2", id:"item-size"}) %>
 
       </div>
     </div>
