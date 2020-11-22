@@ -9,8 +9,7 @@
         <%= "ユーザー名：#{current_user.nickname}さん"%>
       </div>
      <div class="login">
-        <%= link_to "マイページ", root_path, class: "mypage1"%>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: "mypage2"%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete ,class: "mypage1"%>
      </div>
     </div>
     <% else %>

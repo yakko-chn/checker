@@ -1,4 +1,5 @@
 #error_explanation li{
  list-style: none;
  color: red;
+ text-align: center;
 }

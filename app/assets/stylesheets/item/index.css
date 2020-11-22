@@ -1,5 +1,5 @@
 .food-top {
-  width: 100%;
+  width: auto;
   height: 100%;
 }
 
@@ -13,18 +13,34 @@
   padding-top: 30px;
 }
 
+.food-contents {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
 .food-content {
   display: inline;
   float: left;
-  margin: 20px 0 0 20px;
+  margin: 10px 0 0 10px;
   padding: 10px;
   font-size: 20px;
   border: cadetblue 2px solid;
   background-color: rgba(94, 160, 81, 0.7);
+  border-radius: 30px;
+}
+
+.food-content:hover{
+  background-color: rgba(161, 216, 151, 0.7);
+}
+
+.btn:hover {
+  font-size: 20px;
 }
 
 .food-content a{
-  margin: 20px;
+  margin: 5px;
+  font-size: 14px;
 }
 
 .no_food h1{

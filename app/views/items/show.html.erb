@@ -5,7 +5,7 @@
       <%= form_with model: [@item, @comment], local: true do |f|%>
       <h1> コメントの投稿 </h1>
 
-      <div class="comments-food">
+       <div class="comments-food">
           <div class="comment-food">
             <h6> コメントしたい食材 </h6>
             <%= "ユーザー名：#{@item.user.nickname}さん"%><br>
@@ -40,5 +40,5 @@
         <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
       </ul>
     </div>
-  </div>
-  </div>
+ </div>
+</div>

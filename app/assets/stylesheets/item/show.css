@@ -13,12 +13,15 @@
 .comments-food {
   display: inline;
   width: 50%;
+  height: 100vh;
   text-align: center;
   float: left;
+  background-color: rgba(22, 136, 22 ,0.3);
 }
 
 .comment-food h6{
   font-size: 30px;
+  padding-bottom: 30px;
 }
 
 .comment-food {
@@ -37,13 +40,17 @@
 
 .comment {
   width: 50%;
+  height: 100vh;
   text-align: center;
   float: right;
+  background-color: rgba(69, 111, 224, 0.3);
 }
 
 .comment h6{
   font-size: 30px;
   text-align: center;
+  padding-top: 20px;
+  margin-bottom: 30px;
 }
 
 .comments_list {
@@ -53,3 +60,40 @@
 ul {
   list-style: none;
 }
+
+ /* タブレット表示時 */
+
+ @media (max-width: 1024px) {
+   .text{
+     width: 250px;
+     font-size: 10px;
+   }
+
+   .comments_list {
+    font-size: 10px;
+  }
+
+}
+
+
+ /* スマホ表示時 */
+
+@media (max-width: 599px) {
+  
+  .comments-food {
+    display: inline-block;
+    width: 375px;
+    height: 70vh;
+    text-align: center;
+    background-color: rgba(22, 136, 22 ,0.3);
+  }
+
+  .comment {
+    display: inline-block;
+    width: 380px;
+    height: 100vh;
+    background-color: rgba(69, 111, 224, 0.3);
+  }
+
+}
+
