@@ -99,7 +99,7 @@ a {
 /*メニュー（main.html.erb）
 ---------------------------------------------------------------------------*/
 main {
-  background-image: url("nadezhda-filatova-1pP5YVAQWrM-unsplash.jpg"); 
+  background-image: image-url("nadezhda-filatova-1pP5YVAQWrM-unsplash.jpg"); 
   background-size: cover;
   text-align: center;
   width: 100%;
@@ -248,7 +248,7 @@ main {
   /*main.html.erb
   ---------------------------*/
     main {
-      background-image: url("italic-BULatMmIxRA-unsplash.jpg");
+      background-image: image-url("italic-BULatMmIxRA-unsplash.jpg");
       width: auto 0;
     }
 
@@ -335,7 +335,7 @@ main {
  /*main.html.erb
   ---------------------------*/
   .contents {
-    background-image: url("italic-BULatMmIxRA-unsplash.jpg");
+    background-image: image-url("italic-BULatMmIxRA-unsplash.jpg");
     background-size: cover;
   }
 
