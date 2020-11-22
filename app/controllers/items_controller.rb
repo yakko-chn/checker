@@ -4,7 +4,7 @@ class ItemsController < ApplicationController
   before_action :move_to_top_page, only: :edit
 
   def index
-    @items = Item.all
+    @items = Item.all.order('created_at ASC')
   end
 
   def new

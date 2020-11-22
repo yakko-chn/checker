@@ -1,16 +1,29 @@
-.registration-main{
+
+
+.registration {
+  width: 100%;
+  height: 100%;
   text-align: center;
 }
 
-/* session.cssでも反映 */
+.registration-input {
+  width: 50vw;
+  height: 70vh;
+  display: inline-block;
+  text-align: center;
+  padding: 50px 20px 20px 20px;
+  border: royalblue 3px dotted;
+  background-color: rgba(104, 144, 182, 0.2);
+}
 
 h2 {
-  border-bottom: tan 2px solid;
   margin-bottom: 30px;
   padding: 30px;
   font-size: 40px;
   text-align: center;
 }
+
+/* session.cssでも反映 */
 
 .field {
   padding: 15px;
@@ -45,17 +58,31 @@ input[type="password"] {
  /* タブレット表示時 */
  @media (max-width: 1024px) {
 
+  .registration-input {
+    width: 70vw;
+    height: 85vh;
+  }
 }
 
 
  /* スマホ表示時 */
 @media (max-width: 599px) {
+
+  .registration-input {
+    width: 95vw;
+    height: 85vh;
+  }
+
+  .field {
+    padding: 12px;
+  }
+
+  .field-label {
+    font-size: 20px;
+  }
+
   html {
     margin: 0px;
-  }
-  .session-main {
-    width: 100%;
-    height: 500px;
   }
 
   .actions {

@@ -1,3 +1,6 @@
+/*全体の設定
+---------------------------------------------------------------------------*/
+
 .search input{
   padding: 20px;
 }
@@ -40,7 +43,7 @@
   top: 250px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -50,4 +53,122 @@
   font-size: 20px;
   border: cadetblue 2px solid;
   background-color: rgba(94, 160, 81, 0.7);
+  border-radius: 10px;
+}
+
+.result:hover{
+  background-color: rgba(101, 209, 137 ,0.3);
+}
+
+ /* タブレット表示時 */
+
+ @media (max-width: 1024px) {
+
+  /*メイン
+---------------------------------------------------------------------------*/
+
+  .title-name a{
+    font-size: 25px;
+  }
+
+  .signin a{
+    display: inline;
+    font-size: 15px;
+  }
+
+  .search{
+    position: relative;
+  }
+
+  .search-input {
+    position: absolute;
+    top: 150px;
+    left: 30px;
+    width: 450px;
+    font-size: 5px;
+  }
+
+  .search-btn {
+    position: absolute;
+    top: 150px;
+    left: 550px;
+    padding: 10px;
+    width: 70px;
+    height: 59px;
+    font-size: 6px;
+  }
+
+  .search-users {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .search-explanation {
+    position: relative;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .details {
+    position: absolute;
+    top: 280px;
+    left: 100px;
+  }
+
+  .results {
+    justify-content: space-around;
+  }
+
+ }
+
+
+
+ /* スマホ表示時 
+---------------------------------------------------------------------------*/
+@media (max-width: 599px) {
+
+  .search{
+    position: relative;
+  }
+
+  .search-input {
+    position: absolute;
+    top: 200px;
+    left: 30px;
+    width: 250px;
+    font-size: 5px;
+  }
+
+  .search-btn {
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    padding: 10px;
+    width: 70px;
+    height: 59px;
+    font-size: 6px;
+  }
+
+  .search-users {
+    position: relative;
+    margin: 0 auto;
+  }
+  
+  .search-explanation {
+    position: relative;
+    font-size: 10px;
+    text-align: center;
+  }
+  
+  .details {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+  }
+
+  .results {
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+
 }
