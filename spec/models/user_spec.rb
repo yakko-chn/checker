@@ -31,6 +31,14 @@ RSpec.describe User, type: :model do
         expect(@user.errors.full_messages).to include("Nicknameは10文字以内で入力してください")
       end
 
+      it "重複したnicknameが存在する場合登録できない" do
+        @user.save
+        another_user = FactoryBot.build(:user)
+        another_user.nickname = @user.nickname
+        another_user.valid?
+        expect(another_user.errors.full_messages).to include("Nicknameはすでに存在します")
+      end
+
     #--------------------  email  ------------------------
     it "emailが空では登録できない" do
         @user.email = nil

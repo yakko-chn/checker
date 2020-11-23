@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :edit, :create, :update]
+  before_action :authenticate_user!, only: [:new,:show, :edit, :create, :update]
   before_action :set_item, only: [:edit, :update]
   before_action :move_to_top_page, only: :edit
 
@@ -15,6 +15,7 @@ class ItemsController < ApplicationController
     @item = Item.new(item_params)
     
     if @item.save
+      flash[:notice] = "#{@item.food.name}を冷蔵庫に入れました"
       redirect_to root_path
     else
       render :new

@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   with_options presence: true do
-    validates :nickname, length: { maximum: 10 }
+    validates :nickname, length: { maximum: 10 }, uniqueness: true
   end
   
     VALID_EMAIL = /\A\S+@\S+\.\S+\z/.freeze

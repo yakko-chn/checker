@@ -67,10 +67,17 @@ RSpec.describe Item, type: :model do
       end
 
     #--------------------  sell_by  ------------------------
-      it "賞味期限（賞味期限）が空白の場合、登録できない" do
-        @item.sell_by = nil
+    # binding.pry
+    #   it "賞味期限（賞味期限）が空白の場合、登録できない" do
+    #     @item.sell_by = nil
+    #     @item.valid?
+    #     expect(@item.errors.full_messages).to include("Sell byを入力してください")
+    #   end
+
+      it "賞味期限（賞味期限）が購入日よりも前の場合、登録できない" do
+        @item.sell_by = "2020/11/01"
         @item.valid?
-        expect(@item.errors.full_messages).to include("Sell byを入力してください")
+        expect(@item.errors.full_messages).to include("Sell by（賞味期限）は本日以降の日付で登録してください")
       end
    end
 
