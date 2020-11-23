@@ -19,7 +19,7 @@
 
           <%= link_to '詳細', item_path(item.id), class:"btn show" %>
           <%= link_to '編集', edit_item_path(item.id), class:"btn edit" %>
-          <%= link_to '処分', item_path(item.id), method: :delete, class:"btn destroy" %><br>
+          <%= link_to '処分', item_path(item.id), method: :delete, class:"btn destroy", data: { confirm: "#{item.buy_day}日に購入した#{item.food.name}を処分しますか？" } %><br>
         </div>
        <% end %>
    <% end %>
