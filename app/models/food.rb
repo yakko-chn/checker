@@ -2,7 +2,7 @@ class Food < ActiveHash::Base
   self.data = [
     { id: 1, name: '--' },
 
- #米類（id:2）
+    # 米類（id:2）
     { id: 2, name: '玄米' },
     { id: 3, name: '米' },
     { id: 4, name: '米加工品' },
@@ -10,7 +10,7 @@ class Food < ActiveHash::Base
     { id: 6, name: '麦・雑穀' },
     { id: 7, name: 'その他' },
 
- #麺類（id:3）
+    # 麺類（id:3）
     { id: 8, name: 'インスタント' },
     { id: 9, name: 'うどん' },
     { id: 10, name: 'そうめん' },
@@ -22,7 +22,7 @@ class Food < ActiveHash::Base
     { id: 16, name: '冷麺' },
     { id: 17, name: 'その他' },
 
- #野菜類（id:4）
+    # 野菜類（id:4）
     { id: 18, name: '青ネギ' },
     { id: 19, name: 'アスパラガス' },
     { id: 20, name: '大葉' },
@@ -59,7 +59,7 @@ class Food < ActiveHash::Base
     { id: 51, name: 'レンコン' },
     { id: 52, name: 'その他' },
 
-#魚介類（id:5）
+    # 魚介類（id:5）
     { id: 53, name: 'アジ' },
     { id: 54, name: 'アナゴ' },
     { id: 55, name: 'イカ' },
@@ -88,8 +88,7 @@ class Food < ActiveHash::Base
     { id: 78, name: 'マグロ' },
     { id: 79, name: 'その他' },
 
-
-#肉類（id:6）
+    # 肉類（id:6）
     { id: 80, name: '猪肉' },
     { id: 81, name: '鴨肉' },
     { id: 82, name: '牛肉' },
@@ -106,7 +105,7 @@ class Food < ActiveHash::Base
     { id: 93, name: '詰め合わせ' },
     { id: 94, name: 'その他' },
 
-#乳製品類（id:7）
+    # 乳製品類（id:7）
     { id: 95, name: 'うずら卵' },
     { id: 96, name: '温泉卵' },
     { id: 97, name: '牛乳' },
@@ -120,7 +119,7 @@ class Food < ActiveHash::Base
     { id: 105, name: 'ヨーグルト' },
     { id: 106, name: 'その他' },
 
-#果物類（id:8）
+    # 果物類（id:8）
     { id: 107, name: 'バナナ' },
     { id: 108, name: 'みかん類' },
     { id: 109, name: 'メロン' },
@@ -144,7 +143,7 @@ class Food < ActiveHash::Base
     { id: 128, name: 'ドライフルーツ' },
     { id: 129, name: 'その他' },
 
-#冷凍類（id:9）
+    # 冷凍類（id:9）
     { id: 130, name: '弁当' },
     { id: 131, name: '冷凍うどん' },
     { id: 132, name: '冷凍食品' },
@@ -153,7 +152,7 @@ class Food < ActiveHash::Base
     { id: 135, name: 'レトルト食品' },
     { id: 136, name: 'その他' },
 
-#漬物類（id:10）
+    # 漬物類（id:10）
     { id: 137, name: '厚揚げ' },
     { id: 138, name: '油揚げ' },
     { id: 139, name: '梅干し' },
@@ -167,7 +166,7 @@ class Food < ActiveHash::Base
     { id: 147, name: 'ご飯のお供' },
     { id: 148, name: 'その他' },
 
-#パン類（id:11）
+    # パン類（id:11）
     { id: 149, name: '菓子パン' },
     { id: 150, name: 'クロワッサン' },
     { id: 151, name: '惣菜パン' },
@@ -179,7 +178,7 @@ class Food < ActiveHash::Base
     { id: 157, name: 'はちみつ' },
     { id: 158, name: 'その他' },
 
-#粉類（id:12）
+    # 粉類（id:12）
     { id: 159, name: 'お好み焼き粉・たこ焼き粉' },
     { id: 160, name: '片栗粉' },
     { id: 161, name: '唐揚げ粉' },
@@ -191,7 +190,7 @@ class Food < ActiveHash::Base
     { id: 167, name: 'パン粉' },
     { id: 168, name: 'その他' },
 
-#乾物（id:13）
+    # 乾物（id:13）
     { id: 169, name: 'お茶漬け' },
     { id: 170, name: '海藻類' },
     { id: 171, name: 'かつお節' },
@@ -201,7 +200,7 @@ class Food < ActiveHash::Base
     { id: 175, name: 'ふりかけ' },
     { id: 176, name: 'その他' },
 
-#缶詰（id:14）
+    # 缶詰（id:14）
     { id: 177, name: '缶詰（魚介類）' },
     { id: 178, name: '缶詰（肉類）' },
     { id: 179, name: '缶詰（野菜類）' },
@@ -210,7 +209,7 @@ class Food < ActiveHash::Base
     { id: 182, name: '缶詰（ソース類）' },
     { id: 183, name: 'その他' },
 
-#調味料類（id:15）
+    # 調味料類（id:15）
     { id: 184, name: '油' },
     { id: 185, name: 'お酒' },
     { id: 186, name: 'お酢' },
@@ -232,16 +231,16 @@ class Food < ActiveHash::Base
     { id: 202, name: '和風だし' },
     { id: 203, name: 'その他' },
 
-#お菓子類（id:16）
+    # お菓子類（id:16）
     { id: 204, name: 'アメ類' },
     { id: 205, name: 'おつまみ' },
-    { id: 206, name: 'スナック菓子' },     
+    { id: 206, name: 'スナック菓子' },
     { id: 207, name: '駄菓子' },
     { id: 208, name: '洋菓子' },
     { id: 209, name: '和菓子' },
     { id: 210, name: 'その他' },
 
-#お酒類（id:17）
+    # お酒類（id:17）
     { id: 211, name: 'ウイスキー' },
     { id: 212, name: '梅酒' },
     { id: 213, name: '焼酎' },
@@ -250,7 +249,7 @@ class Food < ActiveHash::Base
     { id: 216, name: 'ワイン' },
     { id: 217, name: 'その他' },
 
-#ソフトドリンク類（id:18）
+    # ソフトドリンク類（id:18）
     { id: 218, name: 'お茶' },
     { id: 219, name: '果実飲料' },
     { id: 220, name: '紅茶' },
@@ -263,11 +262,10 @@ class Food < ActiveHash::Base
     { id: 227, name: '野菜ジュース' },
     { id: 228, name: 'その他' },
 
-#その他（id:19）
+    # その他（id:19）
     { id: 229, name: 'その他' }
   ]
 
-#   include ActiveHash::Associations
-#   has_many :items
-
+  #   include ActiveHash::Associations
+  #   has_many :items
 end
