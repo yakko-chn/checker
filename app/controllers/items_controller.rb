@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new,:show, :edit, :create, :update]
+  before_action :authenticate_user!, only: [:new, :show, :edit, :create, :update]
   before_action :set_item, only: [:edit, :update]
   before_action :move_to_top_page, only: :edit
 
@@ -13,7 +13,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    
+
     if @item.save
       flash[:notice] = "#{@item.food.name}を冷蔵庫に入れました"
       redirect_to root_path
@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
 
     @comments = @item.comments
-    @comment = current_user.comments.new 
+    @comment = current_user.comments.new
   end
 
   def update
@@ -39,20 +39,19 @@ class ItemsController < ApplicationController
 
   def destroy
     item = Item.find(params[:id])
-   if item.destroy
-    redirect_to root_path
-   end
+    redirect_to root_path if item.destroy
   end
 
   def concept
-    render "layouts/concept"
+    render 'layouts/concept'
   end
 
   def search
-    render "users/search"
+    render 'users/search'
   end
 
   private
+
   def item_params
     params.require(:item).permit(:buy_day, :category_id, :food_id, :size_id, :sell_by, :memo).merge(user_id: current_user.id)
   end
@@ -63,8 +62,6 @@ class ItemsController < ApplicationController
 
   def move_to_top_page
     @item = Item.find(params[:id])
-    unless current_user.id == @item.user_id
-      redirect_to  root_path
-    end
+    redirect_to root_path unless current_user.id == @item.user_id
   end
 end

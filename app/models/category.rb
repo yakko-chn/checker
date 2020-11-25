@@ -20,7 +20,7 @@ class Category < ActiveHash::Base
     { id: 18, name: '水・ソフトドリンク' },
     { id: 19, name: 'その他' }
   ]
- 
+
   # include ActiveHash::Associations
   # has_many :items
 end

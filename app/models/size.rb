@@ -16,7 +16,6 @@ class Size < ActiveHash::Base
     { id: 14, name: '24個・本・パック' },
     { id: 15, name: 'その他' },
 
-
     { id: 16, name: '100g' },
     { id: 17, name: '200g' },
     { id: 18, name: '300g' },
@@ -27,7 +26,6 @@ class Size < ActiveHash::Base
     { id: 23, name: '10kg' },
     { id: 24, name: 'その他' },
 
-
     { id: 25, name: '200ml' },
     { id: 26, name: '350ml' },
     { id: 27, name: '500ml' },
@@ -37,8 +35,7 @@ class Size < ActiveHash::Base
     { id: 31, name: '2000ml' },
     { id: 32, name: 'その他' }
   ]
- 
+
   # include ActiveHash::Associations
   # has_many :items
-
 end
