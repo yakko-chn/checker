@@ -13,6 +13,10 @@
   letter-spacing: 2px;
 }
 
+.item-memo {
+  width: 50vh;
+}
+
 .necessary {
   color: red;
   font-size: 20px;
@@ -41,6 +45,11 @@
  /* タブレット表示時 */
 
  @media (max-width: 1024px) {
+  
+  .item-memo {
+    width: 50vh;
+    font-size: 10px;
+  }
 
 }
 
@@ -55,6 +64,11 @@
 
 .items span {
   font-size: 15px;
+}
+
+.item-memo {
+  width: 45vh;
+  font-size: 8px;
 }
 
 }

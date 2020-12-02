@@ -1,4 +1,4 @@
-
+/*新規登録ページ */
 
 .registration {
   width: 100%;
@@ -8,7 +8,7 @@
 
 .registration-input {
   width: 50vw;
-  height: 70vh;
+  height: 90vh;
   display: inline-block;
   text-align: center;
   padding: 50px 20px 20px 20px;
@@ -60,7 +60,7 @@ input[type="password"] {
 
   .registration-input {
     width: 70vw;
-    height: 85vh;
+    height: 100vh;
   }
 }
 
@@ -70,7 +70,7 @@ input[type="password"] {
 
   .registration-input {
     width: 95vw;
-    height: 85vh;
+    height: 95vh;
   }
 
   .field {

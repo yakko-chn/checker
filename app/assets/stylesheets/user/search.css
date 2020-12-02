@@ -1,3 +1,5 @@
+/*ユーザー検索ページ */
+
 /*全体の設定
 ---------------------------------------------------------------------------*/
 
@@ -134,19 +136,19 @@
   .search-input {
     position: absolute;
     top: 200px;
-    left: 30px;
-    width: 250px;
-    font-size: 5px;
+    left: 10px;
+    width: 190px;
+    font-size: 15px;
   }
 
   .search-btn {
     position: absolute;
     top: 200px;
-    left: 280px;
+    left: 260px;
     padding: 10px;
     width: 70px;
-    height: 59px;
-    font-size: 6px;
+    height: 66px;
+    font-size: 8px;
   }
 
   .search-users {
@@ -169,6 +171,7 @@
   .results {
     justify-content: space-around;
     margin-top: 10px;
+    font-size: 8px;
   }
 
 }

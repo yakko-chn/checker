@@ -11,7 +11,7 @@
           <%= f.label :nickname %><br />
         </div>
           <div class='field-input'>
-          <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" , placeholder:"ニックネーム名を入力ください",size: "38"%>
+          <%= f.text_area :nickname, autofocus: true, autocomplete: "nickname" , placeholder:"登録する名前を入力ください（最大10文字）",size: "38"%>
         </div>
       </div>
 
@@ -41,7 +41,7 @@
           <%= f.label :password_confirmation %><br />
         </div>
           <div class='field-input'>
-          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"同じパスワードを入力ください" ,size: "50"%>
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder:"先ほどのパスワードを入力ください" ,size: "50"%>
         </div>
       </div>
 
