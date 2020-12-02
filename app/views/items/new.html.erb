@@ -1,4 +1,4 @@
- <%# <%= form_with(model: @item, url: items_path, local: true) do |f| %> 
+
 　<div class="items-contents">
 
   <div class="items-main">
@@ -14,7 +14,7 @@
       </div>
       <%= f.date_select :buy_day, class:"items-buy-day", id:"item-buy-day", placeholder:"食材の購入日を選択してください" %>
     </div>
-    <%# /商品名と商品説明 %>
+    <%# 商品購入日 %>
 
     <%# 商品の詳細 %>
     <div class="items-detail">
@@ -54,7 +54,8 @@
         <div class="items">
          メモ(任意) 
         </div>
-       <%= f.text_area :memo, class:"item-memo", id:"item-memo", placeholder:"こちらは食材一覧から公開されます。非公開の内容の場合、食材登録後にコメントをお使いください。",size: "40" %>
+       <%= f.text_area :memo, class:"item-memo", id:"item-memo", placeholder:"こちらは他のユーザーにも公開されます。
+非公開を希望する場合、食材登録後にコメントをお使いください。",size: "40" %>
      </div>
     </div>
     <%# /商品の賞味期限・メモ %>

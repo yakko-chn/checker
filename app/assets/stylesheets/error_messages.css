@@ -1,5 +1,12 @@
+/*エラー時に表示される文字の設定 */
+
 #error_explanation li{
  list-style: none;
  color: red;
  text-align: center;
 }
+
+#error_explanation h2{
+  text-align: center;
+  font-size: 20px;
+ }

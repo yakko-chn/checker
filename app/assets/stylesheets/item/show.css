@@ -1,3 +1,5 @@
+/*ログインユーザーが使用できるコメントページ */
+
 .comments {
   width: 100%;
   height: 100%;
@@ -83,16 +85,19 @@ ul {
   .comments-food {
     display: inline-block;
     width: 375px;
-    height: 70vh;
+    height: 90vh;
     text-align: center;
     background-color: rgba(22, 136, 22 ,0.3);
+    padding-bottom: 50px;
   }
 
   .comment {
     display: inline-block;
-    width: 380px;
-    height: 100vh;
+    width: 375px;
+    height: 90vh;
+    float: none;
     background-color: rgba(69, 111, 224, 0.3);
+    padding-top: 10px;
   }
 
 }

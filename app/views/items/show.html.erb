@@ -1,7 +1,7 @@
-
+<%# ログインユーザーのみ表示する %>
+ 
 <div class="comments">  
   <div class="item-comments">
-    <%# ログインしているユーザーには以下のコメント投稿フォームを表示する %>
       <%= form_with model: [@item, @comment], local: true do |f|%>
       <h1> コメントの投稿 </h1>
 
@@ -18,7 +18,7 @@
 
         <div class="field-comment">
           <%= f.label :text, "コメント" %><br />
-          <%= f.text_field :text , placeholder:"#{@item.user.nickname}さんのみ閲覧できるプライベート空間です。", size: "50" ,class: "text"  %>
+          <%= f.text_field :text , placeholder:"#{@item.user.nickname}さんのみ閲覧できる空間です。", size: "50" ,class: "text"  %>
         </div>
         <div class="actions">
           <%= f.submit "送信する", class: :form__btn  %>
@@ -26,18 +26,16 @@
             <%=link_to 'トップページに戻る', root_path, class:"back-btn" %>
        </div>
       <% end %>
-    <%# // ログインしているユーザーには上記を表示する %>
+ 
     <div class="comment">
       <h6> 投稿コメント </h6>
       <ul class="comments_lists">
-        <%# 投稿に紐づくコメントを一覧する処理を記述する %>
         <% @comments.each do |comment|  %>
           <li class="comments_list">
             <%=  " 投稿日 ：  #{l comment.created_at, format: :short}" %><br>
             <%=  " コメント内容 ： #{comment.text}" %>
           </li> 
          <% end  %>
-        <%# // 投稿に紐づくコメントを一覧する処理を記述する %>
       </ul>
     </div>
  </div>
