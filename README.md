@@ -6,11 +6,9 @@
 ### 本番環境
    URL：http://www.checker-fridge.com/
    <br>
-   テスト用Email ：food-loss@yahoo.com
-   <br>
-   テスト用Password ： buytoeat10
-   <br>
-   (=>ユーザー名：ターマ)
+　　ゲスト用の簡単ログイン機能を搭載しております。
+ 　<br>
+　　1秒でログイン出来ますので、お試しください！
 
 ## アプリケーション内で使用している技術の一覧・開発環境
  Ruby / Ruby on Rails / MySQL /HTMLCSSJavaScript / GitHub / AWS（EC2、Route53）
