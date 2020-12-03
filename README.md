@@ -112,7 +112,7 @@
 ### トップページ
  特徴：情報量は少なめにして、選択肢を絞りました。
  <br>
-![トップページ](https://i.gyazo.com/cd683c4c1963dada670a76ef2cf83cd3.jpg)
+![トップページ](https://i.gyazo.com/736929001faf2b0f204cd6b5bd751ca9.jpg)
 <br>
 ___
 ### 食材の追加
