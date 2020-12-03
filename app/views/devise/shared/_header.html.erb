@@ -14,8 +14,9 @@
     </div>
     <% else %>
     <div class="signin">
-        <%= link_to "新規登録", new_user_registration_path, class: "post1" %>
-        <%= link_to "ログイン", new_user_session_path, class: "post2" %>
+        <%= link_to "新規登録", new_user_registration_path, class: "b post1" %>
+        <%= link_to "ログイン", new_user_session_path, class: "b post2" %>
+        <%= link_to 'ゲスト用', users_guest_sign_in_path, method: :post, class: "b post3"%>
     </div>
     <% end %>
   </div>
