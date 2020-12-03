@@ -32,6 +32,7 @@ a {
 }
 
 
+
 .header-top a{
   display: block;
   padding:0 30px;
@@ -86,7 +87,7 @@ a {
 .signin a {
   display: block;
   float: right;
-  margin: 10px 20px 10px -20px;
+  margin: 10px 20px 10px -30px;
   padding-right: 5px;
   font-size: 20px;
 }
@@ -107,7 +108,7 @@ main {
 }
 
 .contents {
-  max-width: 1170px;
+  max-width: 1025px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
