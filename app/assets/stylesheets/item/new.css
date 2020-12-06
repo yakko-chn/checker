@@ -43,19 +43,15 @@
 
 
  /* タブレット表示時 */
-
  @media (max-width: 1024px) {
-  
   .item-memo {
     width: 50vh;
     font-size: 10px;
   }
-
 }
 
 
  /* スマホ表示時 */
-
 @media (max-width: 599px) {
 
 .items{
