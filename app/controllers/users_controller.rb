@@ -6,7 +6,7 @@ class UsersController < ApplicationController
 
   def new_guest
     user = User.find_or_create_by!(email: 'guest@example.com') do |user|
-      user.nickname = "Guest"
+      user.nickname = 'Guest'
       user.password = SecureRandom.urlsafe_base64
       user.password_confirmation = user.password
     end
