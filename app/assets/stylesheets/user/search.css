@@ -29,15 +29,11 @@
   margin: 0 auto;
 }
 
-.search-explanation {
-  position: relative;
-  font-size: 25px;
-}
-
-.details {
+.search-explanation  {
   position: absolute;
+  font-size: 25px;
   top: 350px;
-  left: 500px;
+  left: 550px;
 }
 
 .results {
@@ -116,13 +112,8 @@
   }
   
   .search-explanation {
-    position: relative;
-    font-size: 16px;
-    text-align: center;
-  }
-  
-  .details {
     position: absolute;
+    font-size: 20px;
     top: 280px;
     left: 100px;
   }
@@ -167,15 +158,10 @@
   }
   
   .search-explanation {
-    position: relative;
-    font-size: 10px;
-    text-align: center;
-  }
-  
-  .details {
     position: absolute;
+    font-size: 10px;
     top: 300px;
-    left: 50px;
+    left: 30px;
   }
 
   .results {
