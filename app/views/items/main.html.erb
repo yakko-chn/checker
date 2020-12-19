@@ -5,9 +5,9 @@
     <div class="topic">
      <% if user_signed_in? %>
       <div class="btn-topic">
-         <%= link_to "コンセプト", concept_path, class: "topic1" %>
-         <%= link_to "食材一覧", items_path, class: "topic2" %>
-         <%= link_to "食材を追加する", new_item_path, class: "topic3" %>
+         <%= link_to "コンセプト", concept_path, class: "topic1 fas fa-bell"%>
+         <%= link_to "食材一覧", items_path, class: "topic2 fas fa-utensils" %>
+         <%= link_to "食材の追加", new_item_path, class: "topic3 fas fa-plus-square" %>
       </div>
      <% else %>
       <div class="btn-topic">
