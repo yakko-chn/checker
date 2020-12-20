@@ -31,8 +31,6 @@ a {
   border-bottom: burlywood 1px solid;
 }
 
-
-
 .header-top a{
   display: block;
   padding:0 30px;
@@ -40,6 +38,10 @@ a {
   height: 40px;
   float: left;
   text-decoration: none;
+}
+
+.fab::before {
+  padding-right: 10px;
 }
 
 .user-name{
@@ -132,9 +134,13 @@ main {
 }
 
 .btn-topic a {
-  margin: 20px;
-  padding: 30px;
+  margin: 10px;
+  padding: 25px;
   text-decoration: none;
+}
+
+.fas::before {
+  padding-right: 10px;
 }
 
 .topic1 {
