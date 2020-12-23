@@ -50,6 +50,10 @@ class ItemsController < ApplicationController
     render 'users/search'
   end
 
+  def buy_list
+    render 'items/lists'
+  end
+
   private
 
   def item_params
