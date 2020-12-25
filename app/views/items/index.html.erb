@@ -17,9 +17,9 @@
           <%= "賞味期限：#{item.sell_by}"%><br>
           <%= "メモ：#{item.memo}"%><br>
 
-          <%= link_to '詳細', item_path(item.id), class:"btn show fas fa-info" %>
-          <%= link_to '編集', edit_item_path(item.id), class:"btn edit fas fa-edit" %>
-          <%= link_to '処分', item_path(item.id), method: :delete, class:"btn destroy fas fa-trash-alt", data: { confirm: "#{item.buy_day}日に購入した#{item.food.name}を処分しますか？" } %><br>
+          <%= link_to '詳細', item_path(item.id), class:"button show fas fa-info" %>
+          <%= link_to '編集', edit_item_path(item.id), class:"button edit fas fa-edit" %>
+          <%= link_to '処分', item_path(item.id), method: :delete, class:"button destroy fas fa-trash-alt", data: { confirm: "#{item.buy_day}日に購入した#{item.food.name}を処分しますか？" } %><br>
         </div>
        <% end %>
    <% end %>
