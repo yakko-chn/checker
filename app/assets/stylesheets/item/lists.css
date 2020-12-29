@@ -5,3 +5,8 @@
 .text-center h1{
   margin: 50px;
 }
+
+.delete {
+  cursor: pointer;
+  color: green;
+}
