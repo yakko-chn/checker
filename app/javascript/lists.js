@@ -28,4 +28,10 @@ window.addEventListener('load', function(){
         }
       });
 
+      list.addEventListener('click', function(e) {
+        //リストの削除機能
+        if (e.target.classList.contains('delete')){
+            e.target.parentElement.remove();
+        }
+      });
 });
