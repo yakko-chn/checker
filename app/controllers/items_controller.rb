@@ -50,7 +50,7 @@ class ItemsController < ApplicationController
     render 'users/search'
   end
 
-  def buy_list
+  def lists
     render 'items/lists'
   end
 
