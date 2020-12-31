@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users　
     post '/users/guest_sign_in', to: 'users#new_guest'
 
   resources :users do
