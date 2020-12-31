@@ -122,11 +122,26 @@ main {
 
 .topic {
   position: absolute;
-  top: 100px;
+  top: 50px;
   width: 100%;
   height: 880px;
   padding: 0 0 150px 0;
   position: relative;
+  .topic4 {
+    position: absolute;
+    top: 880px;
+    right: 140px;
+    padding: 10px 200px;
+    color: #fff;
+    font-size: 30px;
+    background-color:  rgba(178, 187, 59, 0.6);
+    border-radius: 10px;
+   &:hover {
+    background: white;
+    color: black;
+    transition: 0.5s;
+   }
+  }
 }
 
 .btn-topic {
@@ -147,17 +162,20 @@ main {
   padding-right: 10px;
 }
 
+.far::before {
+  padding-right: 10px;
+}
+
 .topic1 {
   color: #fff;
   font-size: 30px;
   background-color: rgba(134, 21, 21, 0.6);
   border-radius: 10px;
-}
-
-.topic1:hover {
+ &:hover {
   background: white;
   color: black;
   transition: 0.5s;
+ }
 }
 
 .topic2 {
@@ -165,12 +183,11 @@ main {
   font-size: 30px;
   background-color: rgba(78, 54, 165, 0.6);
   border-radius: 10px;
-}
-
-.topic2:hover {
+ &:hover {
   background: white;
   color: black;
   transition: 0.5s;
+ }
 }
 
 .topic3 {
@@ -178,12 +195,11 @@ main {
   font-size: 30px;
   background-color:  rgba(77, 136, 10, 0.6);
   border-radius: 10px;
-}
-
-.topic3:hover {
+ &:hover {
   background: white;
   color: black;
   transition: 0.5s;
+ }
 }
 
 /*フッター
@@ -286,16 +302,17 @@ main {
     }
 
     .topic {
-      position: absolute;
       top: 100px;
-      width: 100%;
-      height: 880px;
-      padding: 0 0 150px 0;
-      position: relative;
+      right: 80px;
+      .topic4 {
+        right: 10px;
+        font-size: 20px;
+      }
     }
 
     .btn-topic a{
       display: block;
+      padding: 20px 70px ;
       }
       
  /*フッター
@@ -375,16 +392,23 @@ main {
   .topic {
     position: absolute;
     top: -150px;
+    right: 30px;
     width: 100%;
     height: 880px;
-    padding: 0 0 150px 0;
+    padding: 0 0 50px 0;
     position: relative;
+    .topic4 {
+      display: block;
+      bottom: 30px;
+      right: 0px;
+      font-size: 20px;
+      padding: 50px 40px;
+    }
   }
 
   .btn-topic {
    padding: 0;
   }
-
   .btn-topic a{
     display: block;
     font-size: 20px;
