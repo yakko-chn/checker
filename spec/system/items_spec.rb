@@ -172,7 +172,7 @@ RSpec.describe '食材詳細', type: :system do
       click_on '詳細'
       # 詳細ページにコメントの入力
       fill_in 'comment_text', with: 'こんにちは'
-      # 送信ボタンを押すと、コメントの内容が表示される　
+      # 送信ボタンを押すと、コメントの内容が表示される
       find('input[name="commit"]').click
       expect(page).to have_content('こんにちは')
     end
@@ -226,7 +226,7 @@ RSpec.describe '食材検索', type: :system do
       visit search_path
       # 検索フォームに入力
       fill_in 'nickname', with: 'ド'
-      # 送信ボタンを押すと、登録した食材が表示される　
+      # 送信ボタンを押すと、登録した食材が表示される
       find('input[name="commit"]').click
       expect(page).to have_selector('.result')
     end

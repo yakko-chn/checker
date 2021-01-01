@@ -1,4 +1,4 @@
-// 　食材の追加（プルダウン時に使用）
+// 食材の追加（プルダウン時に使用）
  window.addEventListener('load', function(){
 
   const itemCategory = document.getElementById("item-category");
