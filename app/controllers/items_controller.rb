@@ -1,5 +1,5 @@
 class ItemsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :show, :edit, :create, :update, :lists]
+  before_action :authenticate_user!, only: [:new, :show, :edit, :create, :update]
   before_action :set_item, only: [:edit, :update]
   before_action :move_to_top_page, only: :edit
 
@@ -49,10 +49,6 @@ class ItemsController < ApplicationController
   def search
     render 'users/search'
   end
-
-  # def lists
-  #   render 'items/lists'
-  # end
 
   private
 
