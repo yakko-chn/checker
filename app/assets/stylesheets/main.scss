@@ -230,7 +230,7 @@ main {
   }
 
  // ログイン済みのボタン
- 　.login {
+   .login {
     position: relative;
     list-style: none;
    }
@@ -290,9 +290,12 @@ main {
       position: relative;
     }
 
-    .btn-topic a{
+    .btn-topic {
+      left: 10px;
+     a{
       display: block;
       }
+    }
       
  /*フッター
   ---------------------------*/
