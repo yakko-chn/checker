@@ -6,6 +6,12 @@
   margin: 50px;
 }
 
+.date,
+.add,
+.lists {
+  margin: 10px;
+}
+
 .delete {
   cursor: pointer;
   color: green;
