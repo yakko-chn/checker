@@ -50,9 +50,9 @@ class ItemsController < ApplicationController
     render 'users/search'
   end
 
-  def lists
-    render 'items/lists'
-  end
+  # def lists
+  #   render 'items/lists'
+  # end
 
   private
 

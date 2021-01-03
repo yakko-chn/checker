@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
    get "/concept/page", to: "items#concept", as: "concept"
    get "/search/user/page", to: "items#search", as: "search"
-   get "/buylist", to: "items#lists", as: "lists"
+  #  get "/buylist", to: "items#lists", as: "lists"
    
   resources :items  do
     resources :comments
