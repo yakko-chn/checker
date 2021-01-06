@@ -33,15 +33,20 @@ a {
   position: fixed;
   display: block;
   border-bottom: burlywood 1px solid;
-}
-
-.header-top a{
-  display: block;
-  padding:0 30px;
-  margin: 10px 0;
-  height: 40px;
-  float: left;
-  text-decoration: none;
+    a{
+      padding:0 30px;
+      margin: 10px 0;
+      height: 40px;
+      float: left;
+      text-decoration: none;
+      }
+        .header-top {
+          position: relative;
+          padding-top: 10px;
+        }
+            .title-name a {
+              font-size: 25px;
+            }
 }
 
 .fab::before {
@@ -51,56 +56,48 @@ a {
 .user-name{
   text-align: right;
   font-size: 20px;
- }
- 
  .name{
    padding-right: 20px;
  }
+}
 
  // ログイン済みのボタン
  .login {
   position: relative;
   list-style: none;
- }
- 
- .login a{
-   font-size: 20px;
+    a{
+    font-size: 20px;
+    }
  }
 
- .mypage1:hover {
-  font-size: 30px;
-  color: navy;
-}
  .mypage1 {
    position: absolute;
    right: -10px;
+   &:hover {
+    font-size: 25px;
+    color: navy;
+   }
  }
  
  input[type="submit"] {
    padding: 10px 20px;
   }
 
-.header-top {
-  position: relative;
-  padding-top: 10px;
-}
-
-.title-name a {
-  font-size: 35px;
-}
 
 // 未ログイン時のボタン
-.signin a {
-  display: block;
-  float: right;
-  margin: 10px 20px 10px -30px;
-  padding-right: 5px;
-  font-size: 20px;
-}
 
-.b:hover {
-  background-color: rgba(235, 97, 97, 0);
-  transform: scale(1.3);
+.signin {
+    a {
+      display: block;
+      float: right;
+      margin: 10px 20px 10px -30px;
+      padding-right: 5px;
+      font-size: 20px;
+    }
+    .b:hover {
+      background-color: rgba(235, 97, 97, 0);
+      transform: scale(1.2);
+    }
 }
 
 /*メニュー（main.html.erb）
@@ -135,13 +132,14 @@ main {
   right: 30px;
   text-align: center;
   padding: 90px;
-}
-
-.btn-topic a {
+ a {
   margin: 10px;
   padding: 25px;
   text-decoration: none;
+ }
 }
+
+// トップページのアイコン設定
 
 .fas::before {
   padding-right: 10px;
@@ -151,51 +149,49 @@ main {
   padding-right: 10px;
 }
 
-.topic1 {
+// トップページの各項目の設定
+
+@mixin topic-custom{
   color: #fff;
   font-size: 30px;
-  background-color: rgba(134, 21, 21, 0.6);
   border-radius: 10px;
- &:hover {
+}
+
+@mixin hover-custom{
   background: white;
   color: black;
   transition: 0.5s;
+}
+
+.topic1 {
+  @include topic-custom;
+  background-color: rgba(134, 21, 21, 0.6);
+ &:hover {
+  @include hover-custom;
  }
 }
 
 .topic2 {
-  color: #fff;
-  font-size: 30px;
+  @include topic-custom;
   background-color: rgba(78, 54, 165, 0.6);
-  border-radius: 10px;
  &:hover {
-  background: white;
-  color: black;
-  transition: 0.5s;
+  @include hover-custom;
  }
 }
 
 .topic3 {
-  color: #fff;
-  font-size: 30px;
+  @include topic-custom;
   background-color:  rgba(77, 136, 10, 0.6);
-  border-radius: 10px;
  &:hover {
-  background: white;
-  color: black;
-  transition: 0.5s;
+  @include hover-custom;
  }
 }
 
 .topic4 {
-  color: #fff;
-  font-size: 30px;
+  @include topic-custom;
   background-color:  rgba(178, 187, 59, 0.6);
-  border-radius: 10px;
  &:hover {
-  background: white;
-  color: black;
-  transition: 0.5s;
+  @include hover-custom;
  }
 }
 
@@ -208,13 +204,11 @@ main {
 	background: #222;	
 	color: #fff;
   font-size: 20px;
-}
-
-.footer P {
+  P {
   padding: 20px;
   margin-top: 20px;
+ }
 }
-
 
  /* タブレット表示時 */
 
@@ -250,11 +244,10 @@ main {
   .login {
     position: relative;
     list-style: none;
-   }
-
-   .login a{
+   a{
      font-size: 20px;
    }
+  }
 
    .mypage1 {
      position: absolute;
@@ -267,19 +260,21 @@ main {
     position: relative;
    }
 
+   @mixin post {
+    position: absolute;
+    top: 30px;
+   }
+
    .post1 {
-     position: absolute;
-     top: 30px;
+     @include post;
      right: -40px;
    }
    .post2 {
-     position: absolute;
-     top: 30px;
+     @include post;
      right: 40px;
    }
    .post3 {
-     position: absolute;
-     top: 30px;
+     @include post;
      right: 120px;
   }
 
@@ -334,11 +329,10 @@ main {
     z-index: 10;
     border-bottom: black 2px solid;
     height: 150px ;
-  }
-
-  .header-top a {
+   a {
     font-size: 30px;
-  }
+   }
+ }
 
   .user-name {
     position: relative;
@@ -378,9 +372,6 @@ main {
   .contents {
     background-image: image-url("italic-BULatMmIxRA-unsplash.jpg");
     background-size: cover;
-  }
-
-  .contents {
     max-width: 1170px;
     padding: 0 15px;
     margin: 0 auto;
@@ -399,12 +390,12 @@ main {
 
   .btn-topic {
    padding: 0;
-  }
-  .btn-topic a{
+   a{
     display: block;
     font-size: 20px;
     padding: 35px;
   }
+ }
 
  /*フッター
   ---------------------------*/
@@ -413,4 +404,4 @@ main {
     height: 100px;
     font-size: 14.5px;
   }
-}
+ }
