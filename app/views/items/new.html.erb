@@ -2,7 +2,6 @@
 <%= form_with(model: @item, url: items_path, local: true) do |f| %> 
 
  <div class="items-contents">
-
   <div class="items-main">
     <h2 class="items-title">食材の追加</h2>
      <%=  render 'devise/shared/error_messages', model: f.object %>

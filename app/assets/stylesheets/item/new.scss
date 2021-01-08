@@ -1,4 +1,4 @@
-/* editアクション同様 */
+/* editアクションと併用 */
 
 .items-contents {
  width: 100%;
@@ -11,15 +11,16 @@
   margin: 10px;
   font-size: 30px;
   letter-spacing: 2px;
+
+  .necessary {
+    color: red;
+    font-size: 20px;
+  }
+
 }
 
 .item-memo {
   width: 50vh;
-}
-
-.necessary {
-  color: red;
-  font-size: 20px;
 }
 
 .sell-btn-contents {
@@ -33,10 +34,7 @@
   font-size: 20px;
 }
 
-.hidden1{
-  display: none;
-}
-
+.hidden1,
 .hidden2{
   display: none;
 }
@@ -54,17 +52,16 @@
  /* スマホ表示時 */
 @media (max-width: 599px) {
 
-.items{
-  font-size: 20px;
-}
+  .items{
+    font-size: 20px;
+  span {
+    font-size: 15px;
+   }
+  }
 
-.items span {
-  font-size: 15px;
-}
-
-.item-memo {
-  width: 45vh;
-  font-size: 8px;
-}
+  .item-memo {
+    width: 45vh;
+    font-size: 8px;
+  }
 
 }
