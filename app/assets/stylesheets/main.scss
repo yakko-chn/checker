@@ -70,7 +70,7 @@ a {
     }
  }
 
- .mypage1 {
+ .mypage {
    position: absolute;
    right: -10px;
    &:hover {
@@ -163,6 +163,7 @@ main {
   transition: 0.5s;
 }
 
+// ボタン「コンセプト」
 .topic1 {
   @include topic-custom;
   background-color: rgba(134, 21, 21, 0.6);
@@ -171,6 +172,7 @@ main {
  }
 }
 
+// ボタン「ユーザー検索・食材一覧」
 .topic2 {
   @include topic-custom;
   background-color: rgba(78, 54, 165, 0.6);
@@ -179,6 +181,7 @@ main {
  }
 }
 
+// ボタン「食材の追加」
 .topic3 {
   @include topic-custom;
   background-color:  rgba(77, 136, 10, 0.6);
@@ -187,6 +190,7 @@ main {
  }
 }
 
+// ボタン「買い物リスト作成」
 .topic4 {
   @include topic-custom;
   background-color:  rgba(178, 187, 59, 0.6);
@@ -249,7 +253,7 @@ main {
    }
   }
 
-   .mypage1 {
+   .mypage {
      position: absolute;
      top: -10px;
      right: -10px;
@@ -352,7 +356,7 @@ main {
     font-size: 20px;
   }
 
-  .mypage1 {
+  .mypage {
     position: absolute;
     top: 50px;
     left: 150px;

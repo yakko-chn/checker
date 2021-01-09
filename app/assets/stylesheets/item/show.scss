@@ -12,6 +12,7 @@
   margin-top: 100px;
 }
 
+// ページ左側のコメントしたい食材
 .comments-food {
   display: inline;
   width: 50%;
@@ -19,59 +20,66 @@
   text-align: center;
   float: left;
   background-color: rgba(22, 136, 22 ,0.3);
+  
+   h6{
+      font-size: 30px;
+      padding-bottom: 30px;
+    }
+
+  .comment-food {
+      font-size: 20px;
+      margin: 20px;
+    }
 }
 
-.comment-food h6{
-  font-size: 30px;
-  padding-bottom: 30px;
-}
-
-.comment-food {
-  font-size: 20px;
-  margin: 20px;
-}
-
+// 送信ボタン
 .field-comment {
   font-size: 20px;
   margin: 10px;
+
+  .text {
+    padding: 15px;
+  }
+
 }
 
-.text {
-  padding: 15px;
-}
-
+// ページ右側の投稿コメント欄
 .comment {
   width: 50%;
   height: 100vh;
   text-align: center;
   float: right;
   background-color: rgba(69, 111, 224, 0.3);
+
+    h6{
+      font-size: 30px;
+      text-align: center;
+      padding-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    .comments-list {
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
 }
 
-.comment h6{
-  font-size: 30px;
-  text-align: center;
-  padding-top: 20px;
-  margin-bottom: 30px;
-}
 
-.comments_list {
-  margin-bottom: 15px;
-}
-
-ul {
-  list-style: none;
-}
 
  /* タブレット表示時 */
 
  @media (max-width: 1024px) {
+
    .text{
      width: 250px;
      font-size: 10px;
    }
 
-   .comments_list {
+   .comments-list {
     font-size: 10px;
   }
 
@@ -81,20 +89,22 @@ ul {
  /* スマホ表示時 */
 
 @media (max-width: 599px) {
-  
-  .comments-food {
+
+  @mixin comment {
     display: inline-block;
     width: 375px;
     height: 90vh;
+  }
+  
+  .comments-food {
+    @include comment;
     text-align: center;
     background-color: rgba(22, 136, 22 ,0.3);
     padding-bottom: 50px;
   }
 
   .comment {
-    display: inline-block;
-    width: 375px;
-    height: 90vh;
+    @include comment;
     float: none;
     background-color: rgba(69, 111, 224, 0.3);
     padding-top: 10px;
