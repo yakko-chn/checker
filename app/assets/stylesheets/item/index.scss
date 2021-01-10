@@ -7,20 +7,21 @@
 
 .food-main {
  text-align: center;
+  h1{
+    height: 150px;
+    font-size: 40px;
+    padding-top: 30px;
+  }
 }
 
-.food-main h1{
-  height: 150px;
-  font-size: 40px;
-  padding-top: 30px;
-}
-
+// 食材一覧ページ郡
 .food-contents {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
+// 食材一覧ページの商品単体の設定
 .food-content {
   display: inline;
   float: left;
@@ -30,21 +31,17 @@
   border: cadetblue 2px solid;
   background-color: rgba(94, 160, 81, 0.7);
   border-radius: 30px;
-}
 
-.food-content:hover{
-  background-color: rgba(161, 216, 151, 0.7);
-}
+    &:hover{
+      background-color: rgba(161, 216, 151, 0.7);
+    }
 
-.button:hover {
-  font-size: 20px;
-}
+    .button:hover {
+      font-size: 20px;
+    }
 
-.food-content a{
-  margin: 5px;
-  font-size: 14px;
-}
-
-.no_food h1{
-  color: red;
+    a{
+      margin: 5px;
+      font-size: 14px;
+    }
 }
