@@ -14,10 +14,16 @@
  Ruby / Ruby on Rails / MySQL /HTMLCSSJavaScript / GitHub / AWS（EC2、Route53）
 
 ```
-バージョン
-　ruby '2.6.5'
- 'rails', '~> 6.0.3', '>= 6.0.3.4'
- 'mysql2', '>= 0.4.4'
+開発環境
+　エディタ：Visual Studio Code 
+　管理ツール：GitHub,trello
+　言語・フレームワーク：Ruby・HTMLCSSJavaScript・Ruby on Rails・Bootstrap・MySQL
+　サーバー：AWS（EC2）
+　　web Server；Nginx
+　　Application Server：Unicorn
+　テスト：Rspec, rubocop
+　URL：AWS(Route53)で取得
+ 
 ```
 
 ## アプリケーションの開発背景
