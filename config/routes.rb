@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   resources :users do
      get 'search' , on: :collection
+
+     resources :lists
    end
 
   root to: 'items#main'
